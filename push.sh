@@ -1,17 +1,10 @@
-if [  $1!='' ]  
-then  
-   msg_01=$1;  
-else  
-   msg_01='-A';  
-fi  
-
-if [  $2!='' ]
+if [  $1!='' ]
 then
-   msg_02=$2;
+   msg=$1;
 else
-   msg_02='modify'
+   msg='modify'
 fi
 
-git add '$msg_01'    
-git commit -m '$msg_02'    
+git add -A   
+git commit -m '$msg'    
 git push
